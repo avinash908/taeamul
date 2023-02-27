@@ -1,0 +1,21 @@
+
+.bg-template{
+  background-color: #fed700;
+}
+.txt-white{
+	color: white;
+}
+
+#p-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.pd-5{
+	padding: 30px;
+}
+.mleft{
+	margin-left: 2rem;	
+}
