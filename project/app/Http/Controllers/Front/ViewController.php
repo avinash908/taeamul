@@ -45,7 +45,7 @@ class ViewController extends Controller
 
         $product = Product::where('status','!=',0)->where('slug','=',$slug)->firstOrFail();
 
-        $related_products = $product->category->products()->where('status','!=',0)->where('id','!=',$product->id)->take(5)->get();
+        $related_products = $product->category ? $product->category->products()->where('status','!=',0)->where('id','!=',$product->id)->take(5)->get() : [];
 
         Session::put('productData', $product->price);
         Session::put('productId', $product->id);

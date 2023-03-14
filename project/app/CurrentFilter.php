@@ -25,7 +25,8 @@ class CurrentFilter
             }
         }
         else{
-            return $childcat->name;
+            return $childcat;
         }
+
 	}
 }

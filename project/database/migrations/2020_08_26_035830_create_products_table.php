@@ -28,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->text('short_description');
             $table->longText('description');
             $table->text('attributes')->nullable();
-            $table->text('thumbnail')->default('assets/images/products/no-image.jpg');
+            $table->text('thumbnail')->nullable();
             $table->boolean('status')->default(1);
             $table->enum('condition',['new','used'])->nullable();
             $table->boolean('is_featured')->default(0);

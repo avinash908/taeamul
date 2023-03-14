@@ -30,24 +30,24 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label>{{__(Banner Title*)}}</label>
+				<label>{{__('Banner Title*')}}</label>
 				<input  type="text" class="form-control" value="{{__($banner->title)}}" name="title" required>
 			</div>
 			<div class="form-group">
-				<label>{{__(Banner Text*)}}<span style="font-size: 11px;">{{__((Content))}}</span></label>
+				<label>{{__('Banner Text*')}}<span style="font-size: 11px;">{{__('Content')}}</span></label>
 
 				<input id="x" type="hidden"  style="z-index: -99" class="form-control" name="content" required>
 				<trix-editor input="x">{!! $banner->content !!}</trix-editor>
 			</div>
 			<div class="form-group">
-				<label>{{__(Offer)}} <span style="font-size: 11px;">{{__((optional))}}</span></label>
+				<label>{{__('Offer')}} <span style="font-size: 11px;">{{__('optional')}}</span></label>
 				<input type="text" class="form-control" value="{{$banner->offer}}" name="offer" placeholder="eg: UPTO 70% OFF">
 			</div>
 			<div class="form-group">
-				<label>{{__(Link*)}} <span style="font-size: 11px;">{{__((link for redirection after click on banner button or text))}}</span></label>
+				<label>{{__('Link*')}} <span style="font-size: 11px;">{{__('link for redirection after click on banner button or text')}}</span></label>
 				<input type="text" name="link" class="form-control" value="{{$banner->link}}" placeholder="eg: https://wwww.taeamul.com/examplepage" required>
 			</div>
-			<button type="submit" class="btn btn-primary rounded-0 float-right">{{__(Save)}}</button>
+			<button type="submit" class="btn btn-primary rounded-0 float-right">{{__('Save')}}</button>
 		</form>
 	</div>
 </div>

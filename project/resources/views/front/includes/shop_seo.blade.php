@@ -1,6 +1,6 @@
 @php
     $seo_CurenTCategory = App\CurrentFilter::category($childcat ?? null, $subcat  ?? null, $cat  ?? null);
-    if($seo_CurenTCategory){
+    if(!empty($seo_CurenTCategory)){
         if($seo_CurenTCategory->seo){
             $seo = $seo_CurenTCategory->seo;
         }

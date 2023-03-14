@@ -161,7 +161,7 @@
                         </td>
                         <td>{{__($r_product->name)}}</td>
                         <td>
-                          {{__(ucfirst($r_product->category->name))}}
+                          {{__(ucfirst($r_product->category? $r_product->category->name : ''))}}
                         </td>
                         <td>{{number_format($r_product->price,2)}}</td>
                           <td>

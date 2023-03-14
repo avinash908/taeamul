@@ -78,14 +78,11 @@
 				<label>{{__('Sub Category*')}}</label>
 				<select name="subcategory" id="subcategory" class="form-control subcategory">
 					<option value="">{{ __('Select Sub Category') }}</option>
-					@if($product->subcategory_id == null)
+					@if($product->category)
 					@foreach($product->category->subs as $sub)
 						<option value="{{$sub->id}}" data-url="{{route('admin.subchildcategory.options',$sub->id)}}">{{__($sub->name)}}</option>
 					@endforeach
-					@else
-					@foreach($product->category->subs as $sub)
-						<option value="{{$sub->id}}" <?= ($sub->id == $product->subcategory_id ) ? 'selected="selected"' : '' ?> data-url="{{route('admin.subchildcategory.options',$sub->id)}}">{{__($sub->name)}}</option>
-					@endforeach
+					
 					@endif
 				</select>
 			</div>
